@@ -1,0 +1,4 @@
+node_modules/**/*
+.next/**/*
+[._]*.swp
+.DS_Store
