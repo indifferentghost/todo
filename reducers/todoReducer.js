@@ -1,4 +1,7 @@
-import { ADD_TODO, GET_TODOS } from '../actions/todoActions';
+import {
+  ADD_TODO,
+  GET_TODOS,
+} from '../actions/todoActions';
 
 export const todoReducer = (state, { type, data }) => {
   switch (type) {

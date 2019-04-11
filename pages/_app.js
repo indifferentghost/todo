@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import App, { Container } from 'next/app';
 import { StateProvider } from '../state';
 
@@ -11,7 +11,7 @@ class TodoApp extends App {
           <Component {...pageProps} />
         </StateProvider>
       </Container>
-    )
+    );
   }
 }
 

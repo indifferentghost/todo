@@ -1,0 +1,11 @@
+# Package ManagersA
+.package-lock.json
+
+# Project Dependencies
+node_modules
+
+# Build Directory 
+.next
+
+# System Files
+.DS_Store

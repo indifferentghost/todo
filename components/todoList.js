@@ -5,7 +5,11 @@ function TodoList() {
   const [{ todos }] = useStateValue();
 
   return (
-    <div>{todos.map(props => <Todo key={props.$loki} {...props} />)}</div>
+    <div>
+      {todos.map(props => (
+        <Todo key={props.$loki} {...props} />
+      ))}
+    </div>
   );
 }
 
