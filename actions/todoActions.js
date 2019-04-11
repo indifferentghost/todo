@@ -8,12 +8,7 @@ export const addTodo = async (
   dispatch, { text, completed = false }
 ) => {
   await axios.post(`${url}/todos`, { text, completed })
-  const { data } = await axios.get(`${url}/todos`);
-  
-  dispatch({
-    data,
-    type: ADD_TODO,
-  });
+  getTodos(dispatch);
 }
 
 export const getTodos = async dispatch => {
