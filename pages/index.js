@@ -1,10 +1,17 @@
+import React, { useEffect } from 'react';
 import Link from "next/link";
 import Header from "../components/header";
-import { addTodo } from '../actions/todoActions';
+import { addTodo, getTodos } from '../actions/todoActions';
 import { useStateValue } from "../state";
+import TodoInput from './todoInput';
+import TodoList from './todoList';
 
 function Index() {
   const [, dispatch] = useStateValue();
+
+  useEffect(() => {
+    getTodos(dispatch);    
+  }, []);
 
   return (
     <main>
@@ -13,9 +20,8 @@ function Index() {
         <Link href="/about">
           <a>Go to About Me</a>
         </Link>
-        <button 
-          onClick={() => addTodo(dispatch, { text: 'new todo' })}
-        >blah</button>
+        <TodoInput />
+        <TodoList />
       </section>
     </main>
   );

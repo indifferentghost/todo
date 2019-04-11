@@ -3,7 +3,7 @@ import reducer from './reducers';
 
 export const StateContext = createContext();
 
-const initialState = { todo: [] };
+const initialState = { todos: [] };
 
 export const StateProvider = ({ children }) => (
   <StateContext.Provider value={useReducer(reducer, initialState)}>

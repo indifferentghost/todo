@@ -1,5 +1,5 @@
 import { todoReducer } from './todoReducer';
 
-export default ({ todo }, action) => ({
-  todo: todoReducer(todo, action),
+export default ({ todos }, action) => ({
+  todos: todoReducer(todos, action),
 });

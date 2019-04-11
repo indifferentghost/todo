@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import App, { Container } from 'next/app';
 import { StateProvider } from '../state';
 
-class TodoList extends App {
+class TodoApp extends App {
   render() {
     const { Component, pageProps } = this.props;
     return (
@@ -15,4 +15,4 @@ class TodoList extends App {
   }
 }
 
-export default TodoList;
+export default TodoApp;
