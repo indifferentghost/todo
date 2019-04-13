@@ -2,6 +2,7 @@ import axios from 'axios';
 
 export const ADD_TODO = 'ADD_TODO';
 export const GET_TODOS = 'GET_TODOS';
+export const UPDATE_TODO = 'UPDATE_TODO';
 
 const url = 'http://localhost:5000/api';
 
@@ -20,4 +21,12 @@ export const getTodos = async dispatch => {
     data,
     type: GET_TODOS,
   });
+};
+
+export const updateTodo = async (
+  dispatch,
+  { text, completed, $loki: id },
+) => {
+  await axios.put(`${url}/todos/${id}`, { text, completed });
+  getTodos(dispatch);
 };
