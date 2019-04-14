@@ -1,6 +1,6 @@
 import React from 'react';
 import App, { Container } from 'next/app';
-import { StateProvider } from '../state';
+import StateProvider from '../state';
 
 class TodoApp extends App {
   render() {
