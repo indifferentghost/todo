@@ -6,8 +6,8 @@ function TodoList() {
 
   return (
     <div>
-      {todos.map(props => (
-        <Todo key={props.$loki} {...props} />
+      {todos.map(todo => (
+        <Todo key={todo.$loki} {...todo} />
       ))}
     </div>
   );

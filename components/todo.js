@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { updateTodo } from '../actions/todoActions';
 import { useStateValue } from '../state';
 
@@ -16,5 +17,11 @@ function Todo({ text, completed, $loki }) {
     </div>
   );
 }
+
+Todo.propTypes = {
+  text: PropTypes.string.isRequired,
+  completed: PropTypes.bool.isRequired,
+  $loki: PropTypes.number.isRequired,
+};
 
 export default Todo;
