@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-You must have a JavaScript runtime installed [Node.js](https://nodejs.org/) installed with [Node package manager (NPM)](https://www.npmjs.com/get-npm).
+You must have [Node.js](https://nodejs.org/) installed with [Node package manager (NPM)](https://www.npmjs.com/get-npm).
 
 ### Installing
 
