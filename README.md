@@ -26,6 +26,7 @@ All of our tests are bootstrapped with [Jest](https://jestjs.io/) the `test` scr
 npm run test
 ```
 
+<!--
 ### Watching
 
 You can continually watch for changes by running:
@@ -33,6 +34,7 @@ You can continually watch for changes by running:
 ```sh
 npm run test:watch
 ```
+-->
 
 ## Developer mode
 
