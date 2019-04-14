@@ -4,7 +4,7 @@
     "dev": "next",
     "now-build": "next build",
     "lint": "eslint .",
-    "prettier": "prettier \"**/*[.+(js|json|yaml|css|md|mdx)rc]\"",
+    "prettier": "prettier \"**/*[.+(js|json|yml|yaml|css|md|mdx)rc]\"",
     "format": "npm run prettier -- --write"
   },
   "dependencies": {
