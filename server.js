@@ -29,12 +29,12 @@ module.exports = app
     // }
 
     server.all('*', (req, res) => handle(req, res));
-    if (dev) {
-      server.listen(port, error => {
-        if (error) throw error;
-        console.info(`Running on port ${port} [${env}]`);
-      });
-    }
+    //   if (dev) {
+    server.listen(port, error => {
+      if (error) throw error;
+      console.info(`Running on port ${port} [${env}]`);
+    });
+    //    }
     return server;
   })
   .catch(error => {
