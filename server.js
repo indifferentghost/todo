@@ -16,24 +16,26 @@ const app = next({ dir: './client', dev });
 
 const handle = app.getRequestHandler();
 
-app
+module.exports = app
   .prepare()
   .then(() => {
     const server = express();
 
-    if (dev) {
-      const proxy = require('http-proxy-middleware');
-      Object.entries(devProxy).forEach(([context, options]) => {
-        server.use(proxy(context, options));
-      });
-    }
+    // if (dev) {
+    const proxy = require('http-proxy-middleware');
+    Object.entries(devProxy).forEach(([context, options]) => {
+      server.use(proxy(context, options));
+    });
+    // }
 
     server.all('*', (req, res) => handle(req, res));
-
-    server.listen(port, error => {
-      if (error) throw error;
-      console.info(`Running on port ${port} [${env}]`);
-    });
+    if (dev) {
+      server.listen(port, error => {
+        if (error) throw error;
+        console.info(`Running on port ${port} [${env}]`);
+      });
+    }
+    return server;
   })
   .catch(error => {
     console.error('An error occured:\n');
