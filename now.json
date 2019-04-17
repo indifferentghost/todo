@@ -3,8 +3,12 @@
   "name": "nextjs",
   "builds": [
     {
-      "src": "**/*.js",
-      "use": "@now/node"
+      "src": "server.js",
+      "use": "@now/node-server"
+    },
+    {
+      "src": "next.config.js",
+      "use": "@now/next"
     }
   ]
 }
