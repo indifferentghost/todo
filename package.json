@@ -1,11 +1,12 @@
 {
+  "license": "MIT",
   "scripts": {
     "build": "next build ./client",
     "dev": "cross-env NODE_ENV=development PORT=3000 nodemon ./server.js",
     "prod": "cross-env NODE_ENV=production PORT=3000 node ./server.js",
     "now-build": "next build ./client",
     "lint": "eslint .",
-    "prettier": "prettier \"**/*[.+(js|json|yml|yaml|css|md|mdx)rc]\"",
+    "prettier": "prettier \"**/*[.+(js|json|yml|yaml|css)rc]\"",
     "format": "npm run prettier -- --write"
   },
   "dependencies": {
