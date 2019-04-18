@@ -16,11 +16,10 @@ const app = next({ dir: './client', dev });
 
 const handle = app.getRequestHandler();
 
-module.exports = app
-  .prepare()
-  .then(() => {
+(async function() {
+  try {
+    await app.prepare();
     const server = express();
-
     // if (dev) {
     const proxy = require('http-proxy-middleware');
     Object.entries(devProxy).forEach(([context, options]) => {
@@ -36,8 +35,8 @@ module.exports = app
     });
     //    }
     return server;
-  })
-  .catch(error => {
+  } catch (error) {
     console.error('An error occured:\n');
     console.error(error.message);
-  });
+  }
+})();
