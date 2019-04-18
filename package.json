@@ -1,4 +1,7 @@
 {
+  "name": "react-todo",
+  "repository": "github:htmlghozt/todo",
+  "description": "A React hooks todo.",
   "license": "MIT",
   "scripts": {
     "build": "next build",
@@ -8,6 +11,12 @@
     "prettier": "prettier \"**/*[.+(js|json|yml|yaml|css)rc]\"",
     "format": "npm run prettier -- --write"
   },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ],
   "dependencies": {
     "axios": "^0.18.0",
     "next": "^8.0.0",
