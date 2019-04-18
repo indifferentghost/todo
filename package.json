@@ -3,6 +3,7 @@
   "scripts": {
     "build": "next build ./client",
     "dev": "cross-env NODE_ENV=development PORT=3000 nodemon ./server.js",
+    "start": "npm run prod",
     "prod": "cross-env NODE_ENV=production PORT=3000 node ./server.js",
     "now-build": "next build ./client",
     "lint": "eslint .",
