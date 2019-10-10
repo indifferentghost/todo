@@ -1,12 +1,19 @@
 import { useStateValue } from '../state';
+// import { filterTodos } from '../actions/todoActions';
 import Todo from './todo';
 
 function TodoList() {
-  const [{ todos }] = useStateValue();
+  const [state /* , dispatch */] = useStateValue();
 
+  /*
+    <span>filter</span>
+      <input
+        onChange={event => filterTodos(dispatch, event.target.value)}
+      />
+  */
   return (
     <div>
-      {todos.map(todo => (
+      {state.todos.map(todo => (
         <Todo key={todo.$loki} {...todo} />
       ))}
     </div>

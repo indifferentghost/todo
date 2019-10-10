@@ -4,6 +4,7 @@ import { useStateValue } from '../state';
 
 function Todo({ text, completed, $loki }) {
   const [, dispatch] = useStateValue();
+
   const handleChecked = () =>
     deleteTodo(dispatch, { text, completed: !completed, $loki });
   return (

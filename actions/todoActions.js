@@ -1,9 +1,10 @@
 import axios from 'axios';
 
-export const ADD_TODO = 'ADD_TODO';
-export const GET_TODOS = 'GET_TODOS';
-export const UPDATE_TODO = 'UPDATE_TODO';
-export const DELETE_TODO = 'DELETE_TODO';
+export const ADD_TODO = Symbol('ADD_TODO');
+export const GET_TODOS = Symbol('GET_TODOS');
+export const UPDATE_TODO = Symbol('UPDATE_TODO');
+export const DELETE_TODO = Symbol('DELETE_TODO');
+export const FILTER_TODOS = Symbol('FILTER_TODO');
 
 const url = 'http://localhost:5000/api';
 
@@ -35,4 +36,11 @@ export const updateTodo = async (
 export const deleteTodo = async (dispatch, { $loki: id }) => {
   await axios.delete(`${url}/todos/${id}`);
   getTodos(dispatch);
+};
+
+export const filterTodos = async (dispatch, filterBy) => {
+  dispatch({
+    data: filterBy,
+    type: FILTER_TODOS,
+  });
 };
