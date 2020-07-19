@@ -8,9 +8,12 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "lerna run dev --parallel"
+    "dev:client": "yarn workspace @todo/client dev:start",
+    "dev:server": "yarn workspace @todo/server dev:start",
+    "dev": "run-p dev:*"
   },
   "devDependencies": {
-    "lerna": "^3.22.1"
+    "lerna": "^3.22.1",
+    "npm-run-all": "^4.1.5"
   }
 }
