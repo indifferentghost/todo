@@ -9,6 +9,8 @@ type Props = {
 export default function Form({ onSubmit, children }: Props) {
   const methods = useForm();
 
+  console.log(methods.getValues());
+
   return (
     <FormProvider {...methods} >
       <form onSubmit={methods.handleSubmit(onSubmit)}>
